@@ -1,0 +1,132 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+.panel_game {
+	background-color: rgba(0,255,0,0);
+	
+	position: absolute;
+
+	text-align: center;
+
+	width: 100%;
+	height: 100%;
+
+}
+
+.section_players {
+	background-color: rgba(0,255,0,0);
+
+	position: relative;e;
+	display: flex;
+
+	width: 40%;
+	height: 90%;
+	left: 10%;
+	top: 40px;
+	overflow: hidden;
+
+}
+
+.section_playerOne {
+	background-color: rgba(0,0,255,0);
+	display: inline;
+	width: 50%;
+	height: 100%;
+}
+
+.section_playerTwo {
+	background-color: rgba(255,255,0,0);
+	display: inline;
+	width: 50%;
+	height: 100%;
+}
+
+.section_playerOne > img:hover, .section_playerTwo > img:hover {
+	opacity: 1;
+	cursor: pointer;
+}
+
+.section_playerOne > img, .section_playerTwo  > img {
+	max-width: 200px;
+	opacity: 0.3;
+}
+
+.text {
+	background-color: rgba(255,0,0,1);
+	color: #fff;
+	width: 40%;
+	position: absolute;
+	left: 10%;
+	padding: 10px;
+	transition: 1s;
+	opacity: 0;
+}
+
+.modo_computer {
+	display: inline-block;
+	margin: 10px 800px;
+}
+.switch {
+	background-color: rgba(255,0,255,0);
+	position: relative;
+	display: inline-block;
+	width: 60px;
+	height: 34x;
+}
+
+.switch input {
+	opacity: 0;
+	width: 0;
+	height: 0;
+}
+
+.turn {
+	background-color: #ccc;
+
+	position: absolute;
+	height: 30px;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+
+	cursor: pointer;
+	transition-property: .4s;
+}
+
+.turn:before {
+	position: absolute;
+	content: "";
+	height: 26px;
+	width: 26px;
+	left: 4px;
+	bottom: 4px;
+	background-color: #fff;
+	transition: .4s;
+}
+
+input:checked + .turn {
+	background-color: #2196F3;
+}
+
+input:focus + .turn {
+	box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .turn:before {
+	transform: translateX(26px);
+}
+
+.turn.round {
+	border-radius: 34px;
+}
+
+.turn.round:before {
+	border-radius: 50%;
+}
+
+
+
